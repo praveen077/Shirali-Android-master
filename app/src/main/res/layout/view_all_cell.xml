@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lytAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_marginEnd="5dp">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/recImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:visibility="visible"
+                app:cardCornerRadius="2dp">
+
+                <ProgressBar
+                    android:id="@+id/loaderIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <ImageView
+                    android:id="@+id/img_itemcell"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:scaleType="fitXY"/>
+
+                <ImageView
+                    android:id="@+id/img_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/premium_tag_en"/>
+
+            </android.support.v7.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="5dp"
+                android:maxWidth="160dp"
+                android:singleLine="true"
+                android:text="@string/top_new_weekly"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginStart="5dp" />
+
+            <TextView
+                android:id="@+id/sub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="6dp"
+                android:maxWidth="160dp"
+                android:singleLine="true"
+                android:text="@string/by_shirali"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:typeface="sans"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/playerDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lyt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:background="@color/bg_color"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <SeekBar
+                android:id="@+id/mseek"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-11dp"
+                android:layout_marginRight="-13dp"
+                android:maxHeight="@dimen/max_seekheight"
+                android:minHeight="@dimen/min_seekheight"
+                android:progressDrawable="@drawable/seekbar_drawable" />
+
+            <LinearLayout
+                android:id="@+id/layoutSeek"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:weightSum="7">
+
+                <ImageView
+                    android:id="@+id/repeat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:padding="12dp"
+                    android:src="@drawable/repeat" />
+
+                <ImageView
+                    android:id="@+id/imgDisLike"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/thumb_down_white" />
+
+                <ImageView
+                    android:id="@+id/img_previous"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/previous" />
+
+                <ImageView
+                    android:id="@+id/imgPlay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/play"
+                    android:visibility="visible" />
+
+                <ImageView
+                    android:id="@+id/imgPause"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:src="@drawable/icon_pause"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/loadingMusic"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:padding="5dp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/img_next"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/next" />
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/thumb_up_white" />
+
+
+                <ImageView
+                    android:id="@+id/shuffle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:src="@drawable/suffle" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.shirali">
+
+    // here are all the android permitions - Mendy
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+
+    <permission
+        android:name="com.shirali.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.shirali.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <permission android:name="android.permission.MEDIA_CONTENT_CONTROL" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    //here we have app detail and information - Mendy
+    <application
+        android:name=".App"
+        android:icon="@mipmap/shirali_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/shirali_logo"
+        android:supportsRtl="false"
+        android:theme="@style/AppTheme"
+        android:allowBackup="false">
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.splash"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.SignUpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.splash"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.PasswordRecoveryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.splash"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".activity.NewReleasesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.AddPlaylistsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.YourSubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.SubscriptionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.FilterMusicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.LanguageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.LoadingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.splash" />
+        <activity
+            android:name=".activity.ArtistDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.AlbumDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.PlaylistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.GenreDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+
+        <service
+            android:name=".service.SongPlayService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".service.PlayService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shirali_background"
+            android:stopWithTask="false" />
+
+        <receiver android:name=".controls.RemoteControlPlayer">
+            <!--<intent-filter>
+                <action android:name="com.shirali.delete" />
+                <action android:name="com.shirali.pause" />
+                <action android:name="com.shirali.next" />
+                <action android:name="com.shirali.play" />
+                <action android:name="com.shirali.previous" />
+                <action android:name="com.shirali.like" />
+                <action android:name="com.shirali.dislike" />
+                <action android:name="com.shirali.MEDIA_BUTTON" />
+            </intent-filter>-->
+        </receiver>
+        <receiver
+            android:name=".receiver.TimerBroadcast"
+            android:exported="false" />
+        <receiver
+            android:name=".receiver.SongPlayInBackgroundBroadcast"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="Current_Song_Play" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activity.ViewAllActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+
+        <service android:name=".receiver.FirebaseTokenService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".receiver.NotificationService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.mixpanel.android.mpmetrics.GCMReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.shirali" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="true" />
+
+        <activity
+            android:name=".activity.SongListForGenreActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.DeepLinkActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="shirali" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.PlayerActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.PlayerDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+
+        <receiver android:name=".receiver.InternetRecevier">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+
+        <!--<receiver android:name=".receiver.CallReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </receiver>-->
+
+        <activity
+            android:name=".activity.RadioStationsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.RecommendedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.AllPlaylistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.AllArtistActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activity.ArtistViewAllActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main" />
+        <activity
+            android:name=".activity.NewCampiagnActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.main"
+            android:resizeableActivity="false"
+            android:taskAffinity="">
+            <!--<layout android:defaultHeight="300dp"
+                android:defaultWidth="600dp"
+                android:gravity="top|end"
+                android:minHeight="300dp"
+                android:minWidth="300dp" />-->
+        </activity>
+        <activity android:name=".activity.BaseActivity"></activity>
+    </application>
+
+</manifest>

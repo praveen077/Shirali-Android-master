@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="unSelect_edit_color">#bcfbfbfb</color>
+    <color name="back_color">#0511E2</color>
+
+    <color name="player_bg">#191919</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="seek_unselect">#444444</color>
+    <color name="Whit_light">#ffffff</color>
+    <color name="tran">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="view_line_color">#403D3E</color>
+
+    <color name="bgcolor">#161616</color>
+    <color name="song_tag_bg">#2A272B</color>
+
+    <color name="drak_grey">#707070</color>
+    <color name="dark_white">#32c0c0c0</color>
+    <color name="light_gray">#C0C0C0</color>
+    <color name="bg_color">#1D1D1D</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="playlist_cancel">#3A3A3A</color>
+    <color name="playlist_create">#130FE2</color>
+    <color name="playlist_create_trans">#be130fe2</color>
+    <color name="playlist_hint">#8E8E8E</color>
+    <color name="rock_back">#0511e2</color>
+    <color name="world_music_back">#f2911f</color>
+    <color name="pop_color">#7d05e2</color>
+    <color name="traditional_back_color">#cf3333</color>
+    <color name="classic">#7d05e2</color>
+    <color name="bg_trans">#b91d1d1d</color>
+    <color name="white_trans">#82ffffff</color>
+    <color name="blue_trans">#1d1b1de3</color>
+    <color name="blue_hard_trans">#c81b1de3</color>
+    <color name="blue_light_trans">#6b1b1de3</color>
+    <color name="ttt">#00000000</color>
+    <color name="blueee">#7b1310c4</color>
+    <color name="blue_image">#151363</color>
+    <color name="small_rec">#201F21</color>
+    <color name="bg_transparent">#f51d1d1d</color>
+    <color name="black_transparent">#96000000</color>
+    <color name="black_trans">#00000000</color>
+    <color name="blue_obeque">#c80000ff</color>
+    <color name="playlist_create_transs">#c8130fe2</color>
+    <color name="trans_blue">#e61310ce</color>
+    <color name="overlay">#dc1d1d1d</color>
+    <color name="bg_trans_color">#E61D1D1D</color>
+    <color name="white_transparent">#00FFFFFF</color>
+
+    <color name="dark_blue">#413eef</color>
+    <color name="light_blue">#536dfe</color>
+
+    <color name="play_icon">#525aea</color>
+    <color name="circle_color">#0511e2</color>
+
+    <color name="purple_player">#590489</color>
+    <color name="purple_seek">#ad33f3</color>
+    <color name="dark_sky">#53fed9</color>
+    <color name="holder_color">#111111</color>
+</resources>

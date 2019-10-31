@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/waves"
+          android:width="370dp"
+          android:height="370dp">
+    </item>
+    <item
+        android:width="60dp"
+        android:height="60dp"
+        android:gravity="center">
+        <shape android:shape="oval"
+            >
+            <solid android:color="@color/black"/>
+        </shape>
+    </item>
+    <item
+        android:width="30dp"
+        android:height="30dp"
+        android:drawable="@drawable/arrow"
+        android:gravity="center"/>
+</layer-list>

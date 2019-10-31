@@ -1,0 +1,5 @@
+<resources>
+  <dimen name="max_seekheight">2dp</dimen>
+  <dimen name="min_seekheight">1dp</dimen>
+  <dimen name="recycler_section_header_height">40dp</dimen>
+</resources>

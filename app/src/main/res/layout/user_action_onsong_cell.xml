@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bs"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppDialogTheme">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.80"
+        android:background="@color/trans_blue"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivArtistImage"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/tvArtistName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/ivArtistImage"
+                android:layout_toLeftOf="@+id/closeArtistSheet"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_toStartOf="@+id/closeArtistSheet"
+                android:layout_toEndOf="@+id/ivArtistImage"
+                android:layout_marginStart="10dp" />
+
+            <ImageView
+                android:id="@+id/closeArtistSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:padding="5dp"
+                android:src="@drawable/close"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/lytPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_song"/>
+
+            <TextView
+                android:id="@+id/lblPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/play_c"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytAddMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_end_queue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:gravity="center_vertical"
+                android:text="@string/add_more"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytEditPlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_song"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/edit_palylist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lytAddToPlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_end_queue"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="11dp"
+                android:gravity="center_vertical"
+                android:text="@string/add_to_playlist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytShareSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="2">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_song"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/share_song"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytViewAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="2">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/view_album"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/view_album"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytViewArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/mic"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="13dp"
+                android:gravity="center_vertical"
+                android:text="@string/view_artist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytShareArtist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_song"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/share_artist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytShareAlbum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/share_song"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/share_album"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytSharePlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/share_song"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/share_playlist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytFollowPlaylist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_end_queue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:gravity="center"
+                android:text="@string/follow_playlist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytUnFollow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="3dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/add_end_queue"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="11dp"
+                android:gravity="center"
+                android:text="@string/unfollow_playlist"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lytRemoveSong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/remove"/>
+
+            <TextView
+                android:id="@+id/lblRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="@string/remove_from_my_music"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:typeface="normal"/>
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

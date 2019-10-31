@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:descendantFocusability="blocksDescendants">
+
+                <LinearLayout
+                    android:id="@+id/playlistLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:id="@+id/lytAuto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/auto_playlist"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:typeface="normal"/>
+
+                        <LinearLayout
+                            android:id="@+id/layoutAutoPlaylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                            <android.support.v7.widget.CardView
+                                android:id="@+id/roundedImage"
+                                android:layout_width="55dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="10dp"
+                                app:cardCornerRadius="5dp"
+                                app:cardPreventCornerOverlap="false"
+                                app:cardUseCompatPadding="true">
+
+                                <ImageView
+                                    android:id="@+id/ivRectangularArtist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/imglogo"/>
+                            </android.support.v7.widget.CardView>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:orientation="vertical">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginBottom="5dp"
+                                    android:alpha="0.15"
+                                    android:background="@color/white"/>
+
+                                <TextView
+                                    android:id="@+id/tvSongName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/recently_added_to_music"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:typeface="normal"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/noSongs"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:typeface="sans"/>
+
+                                    <ImageView
+                                        android:id="@+id/imgDot"
+                                        android:layout_width="5dp"
+                                        android:layout_height="5dp"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_margin="5dp"
+                                        android:src="@drawable/circle_blue"/>
+
+                                    <TextView
+                                        android:id="@+id/time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="15sp"
+                                        android:typeface="sans"/>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0.5dp"
+                                    android:layout_marginTop="15dp"
+                                    android:alpha="0.15"
+                                    android:background="@color/white"/>
+
+                            </LinearLayout>
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center"
+                                android:layout_margin="10dp"
+                                android:padding="5dp"
+                                android:src="@drawable/forward_arrow"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="@string/my_playlist"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:typeface="normal"/>
+
+                        <TextView
+                            android:id="@+id/tvCreatePlaylist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/roundedrectangle2"
+                            android:gravity="center"
+                            android:padding="14dp"
+                            android:text="@string/create_a_new_playlist"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recycle_addlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:nestedScrollingEnabled="false"
+                        android:orientation="vertical"
+                        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+                    <RelativeLayout
+                        android:id="@+id/layoutMyPlaylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/ivMyPlaylist"
+                            android:layout_width="55dp"
+                            android:layout_height="50dp"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="5dp"
+                            app:cardPreventCornerOverlap="false"
+                            app:cardUseCompatPadding="true">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"/>
+                        </android.support.v7.widget.CardView>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@+id/ivMyPlaylist"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginBottom="5dp"
+                                android:alpha="0.15"
+                                android:background="@color/white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/recently_added_to_music"
+                                android:textColor="@color/white"
+                                android:textSize="16sp"
+                                android:typeface="normal"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/_18_songs"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:typeface="normal"/>
+
+                                <ImageView
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:src="@drawable/circle_blue"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="@string/_45_minutes"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:typeface="sans"/>
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:alpha="0.15"
+                                android:background="@color/white"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:padding="5dp"
+                            android:src="@drawable/forward_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/empty_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:text="@string/create_your_first_playlist_here_it_s_easy"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/createPlaylist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="15dp"
+                        android:layout_marginTop="10dp"
+                        android:alpha=".6"
+                        android:background="@drawable/roundedrectangle2"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="@string/create_a_new_playlist"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"/>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+</layout>

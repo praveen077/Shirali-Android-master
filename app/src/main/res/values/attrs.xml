@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MKLoader">
+        <attr name="mk_color" format="color"/>
+        <attr name="mk_type">
+            <enum name="Sharingan" value="11"/>
+            <enum name="TwinFishesSpinner" value="7"/>
+            <enum name="ClassicSpinner" value="0"/>
+
+            <enum name="LineSpinner" value="2"/>
+            <enum name="FishSpinner" value="1"/>
+            <enum name="PhoneWave" value="10"/>
+
+            <enum name="ThreePulse" value="3"/>
+            <enum name="FourPulse" value="4"/>
+            <enum name="FivePulse" value="5"/>
+
+            <enum name="Worm" value="8"/>
+            <enum name="Whirlpool" value="9"/>
+            <enum name="Radar" value="6"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="IndexFastScrollRecyclerview">
+        <attr name="setIndexTextSize" format="integer" />
+        <attr name="setIndexbarWidth" format="float" />
+        <attr name="setIndexbarMargin" format="float" />
+        <attr name="setPreviewPadding" format="integer" />
+        <attr name="setPreviewTextSize" format="integer" />
+        <attr name="setPreviewColor" format="color" />
+        <attr name="setPreviewTextColor" format="color" />
+        <attr name="setPreviewTransparentValue" format="float" />
+        <attr name="setIndexBarCornerRadius" format="integer" />
+        <attr name="setIndexBarTransparentValue" format="float" />
+        <attr name="setIndexBarColor" format="string" />
+        <attr name="setIndexBarTextColor" format="string" />
+        <attr name="setIndexBarHighlightTextColor" format="string" />
+        <attr name="setIndexBarColorRes" format="color" />
+        <attr name="setIndexBarTextColorRes" format="color" />
+        <attr name="setIndexBarHighlightTextColorRes" format="color" />
+    </declare-styleable>
+</resources>

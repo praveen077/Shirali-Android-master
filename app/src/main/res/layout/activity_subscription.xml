@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_color"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:src="@drawable/backarrow" />
+
+                <TextView
+                    android:id="@+id/lblHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="@string/individual_monthly"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/btn"
+                    android:scrollbars="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lytNote"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/trans_blue">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginRight="15dp"
+                                android:gravity="left"
+                                android:lineSpacingExtra="10dp"
+                                android:padding="10dp"
+                                android:text="@string/listen_on_all_devices_ndownload_music_amp_listen_offline_nno_add_amp_no_commitment"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:alpha="0.15"
+                                android:background="@color/white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:text="@string/billing_information"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                            <EditText
+                                android:id="@+id/lblFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/first_name"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/last_name"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblStreet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/street_name"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblApartment"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/apartment_optional"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblCity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/city"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblState"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/state"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblZip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/zip_code"
+                                android:inputType="number"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblPhone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:hint="@string/phone_number"
+                                android:inputType="phone"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:alpha="0.15"
+                                android:background="@color/white"
+                                android:visibility="gone" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:visibility="gone">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/sleepTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/billing_adress"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/descText"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:text="@string/use_same_as_mail_address"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+
+                                <Switch
+                                    android:id="@+id/simpleSwitch"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center"
+                                    android:checked="true"
+                                    android:thumb="@drawable/thumb_color"
+                                    android:track="@drawable/track_color" />
+
+                            </RelativeLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="15dp"
+                                android:alpha="0.15"
+                                android:background="@color/white"
+                                android:visibility="gone" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytPayment"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:text="@string/payment"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblCreditCardName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:gravity="left"
+                                android:hint="@string/credit_card_name"
+                                android:inputType="textCapWords"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblCardNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:gravity="left"
+                                android:hint="@string/credit_card_number"
+                                android:inputType="number"
+                                android:maxLength="19"
+                                android:paddingBottom="20dp"
+                                android:paddingTop="20dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <EditText
+                                    android:id="@+id/lblExpire"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_weight="1"
+                                    android:alpha="0.8"
+                                    android:backgroundTint="@color/white"
+                                    android:gravity="left"
+                                    android:hint="@string/expiration_date"
+                                    android:inputType="date"
+                                    android:maxLength="7"
+                                    android:paddingBottom="15dp"
+                                    android:paddingTop="15dp"
+                                    android:textColor="@color/white"
+                                    android:digits="0123456789"
+                                    android:textColorHint="@color/white"
+                                    android:textSize="14sp" />
+
+                                <EditText
+                                    android:id="@+id/lblCvv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_weight="1"
+                                    android:alpha="0.8"
+                                    android:backgroundTint="@color/white"
+                                    android:gravity="left"
+                                    android:hint="@string/security_code"
+                                    android:inputType="numberPassword"
+                                    android:maxLength="4"
+                                    android:paddingBottom="15dp"
+                                    android:paddingTop="15dp"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/white"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/lblPayoutOption"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:alpha="0.8"
+                                android:padding="15dp"
+                                android:text="@string/want_to_use_another_payment_option"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytProfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="80dp"
+                            android:layout_marginLeft="5dp"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:alpha="0.15"
+                                android:background="@color/white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:singleLine="true"
+                                android:text="@string/billing_information"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+
+                            <EditText
+                                android:id="@+id/lblUserFirstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:gravity="left"
+                                android:hint="@string/first_name"
+                                android:inputType="textAutoComplete"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblUserLastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:gravity="left"
+                                android:hint="@string/last_name"
+                                android:inputType="textAutoComplete"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblUserEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:enabled="true"
+                                android:gravity="left"
+                                android:hint="@string/email"
+                                android:inputType="textEmailAddress"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+
+                            <EditText
+                                android:id="@+id/lblUserPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="15dp"
+                                android:alpha="0.8"
+                                android:backgroundTint="@color/white"
+                                android:gravity="left"
+                                android:hint="@string/password"
+                                android:inputType="textPassword"
+                                android:paddingBottom="15dp"
+                                android:paddingTop="15dp"
+                                android:textColor="@color/white"
+                                android:textColorHint="@color/white"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </ScrollView>
+
+                <FrameLayout
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true">
+
+                    <Button
+                        android:id="@+id/btnSubscribe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@color/trans_blue"
+                        android:hint="@string/pay_now"
+                        android:padding="15dp"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+                </FrameLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-160dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/waves_spiral" />
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

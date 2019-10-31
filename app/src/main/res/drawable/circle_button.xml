@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/waves">
+        <shape>
+            <size
+                android:width="200dp"
+                android:height="200dp"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="155dp"
+        android:left="155dp"
+        android:right="155dp"
+        android:top="155dp">
+        <shape android:shape="oval">
+            <size
+                android:width="60dp"
+                android:height="60dp"/>
+            <solid android:color="@color/black"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="170dp"
+        android:drawable="@drawable/arrow"
+        android:left="170dp"
+        android:right="170dp"
+        android:top="170dp">
+        <shape
+            android:shape="oval">
+            <size
+                android:width="30dp"
+                android:height="30dp"/>
+        </shape>
+    </item>
+</layer-list>

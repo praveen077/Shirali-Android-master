@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--<ProgressBar
+            android:id="@+id/loaderIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp"/>-->
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_margin="7dp"
+            android:scaleType="fitXY"/>
+
+        <ImageView
+            android:id="@+id/img_tag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="7dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/premium_tag_en"/>
+
+    </RelativeLayout>
+</layout>

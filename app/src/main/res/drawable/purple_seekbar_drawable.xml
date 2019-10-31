@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@android:id/background"
+        android:gravity="center"
+        android:height="2dp">
+        <shape>
+            <solid android:color="@color/seek_unselect"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress"
+        android:height="2dp"
+        android:gravity="center">
+        <clip>
+            <shape>
+                <solid android:color="@color/purple_seek"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>

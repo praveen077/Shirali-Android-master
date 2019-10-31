@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeLyt"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lytBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <android.support.v4.view.ViewPager
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+                        <com.viewpagerindicator.CirclePageIndicator
+                            android:id="@+id/indicator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|bottom"
+                            android:padding="15dp"
+                            app:centered="true"
+                            app:paddingStart="5dp"
+                            app:snap="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/home_cell"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lytAllData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/lytrecommended"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:orientation="horizontal"
+                                android:paddingLeft="2dp">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginStart="5dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="@string/recommended"
+                                        android:textColor="@color/white"
+                                        android:textSize="16sp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:alpha="0.80"
+                                        android:text="@string/get_better_recommendations_the_more_you_listen"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+                                </LinearLayout>
+
+
+                                <!-- <TextView
+                                     android:id="@+id/lblRecentViewAll"
+                                     android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                     android:layout_alignParentRight="true"
+                                     android:layout_gravity="center_vertical"
+                                     android:layout_margin="5dp"
+                                     android:alpha="0.80"
+                                     android:gravity="right"
+                                     android:text="@string/view_all"
+                                     android:textColor="@color/white"
+                                     android:textSize="12sp"
+                                     android:visibility="gone" />-->
+
+                            </RelativeLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycleview_geners"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:visibility="visible"
+                                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytNewReleasePage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="3dp"
+                                android:orientation="horizontal"
+                                android:paddingLeft="2dp">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="5dp"
+                                    android:gravity="center"
+                                    android:text="@string/new_releases_file"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />
+
+                                <!--<TextView
+                                    android:id="@+id/lytAlbums"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:gravity="center_vertical"
+                                    android:text="@string/recently_played_albums"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />-->
+
+
+                                <!--<TextView
+                                    android:id="@+id/lblAlbumViewAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_margin="5dp"
+                                    android:alpha="0.80"
+                                    android:text="@string/view_all"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />-->
+
+
+                            </RelativeLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recyclerview_album"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/lytRecent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="05dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:orientation="horizontal">
+
+                                <!-- <LinearLayout
+                                     android:layout_width="0dp"
+                                     android:layout_height="wrap_content"
+                                     android:layout_marginLeft="5dp"
+                                     android:layout_weight="1.5"
+                                     android:orientation="vertical">
+
+                                     <TextView
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:text="@string/songs_for_you"
+                                         android:textColor="@color/white"
+                                         android:textSize="16sp" />
+
+                                     <TextView
+                                         android:layout_width="wrap_content"
+                                         android:layout_height="wrap_content"
+                                         android:alpha="0.80"
+                                         android:text="@string/inspired_by_your_listening"
+                                         android:textColor="@color/white"
+                                         android:textSize="12sp" />
+                                 </LinearLayout>-->
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="@string/new_recently_played"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <TextView
+                                    android:id="@+id/lblSongViewAll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_margin="5dp"
+                                    android:alpha="0.80"
+                                    android:text="@string/view_all"
+                                    android:textColor="@color/white"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/recycleview_sfu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/lytSelectedGenres"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgArtist"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/img_profile" />
+
+                                <TextView
+                                    android:id="@+id/lblArtist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toEndOf="@+id/imgArtist"
+                                    android:layout_toLeftOf="@+id/imgArtistForword"
+                                    android:layout_toRightOf="@+id/imgArtist"
+                                    android:layout_toStartOf="@+id/imgArtistForword"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:padding="5dp"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/artist"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:gravity="left"/>
+
+                                <ImageView
+                                    android:id="@+id/imgArtistForword"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/lytPlaylist"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgPlaylist"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/img_music" />
+
+                                <TextView
+                                    android:id="@+id/lblPlaylist"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toEndOf="@+id/imgPlaylist"
+                                    android:layout_toLeftOf="@+id/imgPlaylistForword"
+                                    android:layout_toRightOf="@+id/imgPlaylist"
+                                    android:layout_toStartOf="@+id/imgPlaylistForword"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:padding="5dp"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/playlists"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:gravity="left"/>
+
+                                <ImageView
+                                    android:id="@+id/imgPlaylistForword"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/lytGenres"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgGenres"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/img_bookmark" />
+
+                                <TextView
+                                    android:id="@+id/lblGenre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toEndOf="@+id/imgGenres"
+                                    android:layout_toLeftOf="@+id/imgGenresForword"
+                                    android:layout_toRightOf="@+id/imgGenres"
+                                    android:layout_toStartOf="@+id/imgGenresForword"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:padding="5dp"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/geners"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:gravity="left"/>
+
+                                <ImageView
+                                    android:id="@+id/imgGenresForword"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/lytRecommended"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgRecommended"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/img_heart" />
+
+                                <TextView
+                                    android:id="@+id/lblRecommended"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toEndOf="@+id/imgRecommended"
+                                    android:layout_toLeftOf="@+id/imgRecommendedForword"
+                                    android:layout_toRightOf="@+id/imgRecommended"
+                                    android:layout_toStartOf="@+id/imgRecommendedForword"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:padding="5dp"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/recommended"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:gravity="left"/>
+
+                                <ImageView
+                                    android:id="@+id/imgRecommendedForword"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/lytNewRelease"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgNewRelease"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/img_flag" />
+
+                                <TextView
+                                    android:id="@+id/lblNewRelease"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toEndOf="@+id/imgNewRelease"
+                                    android:layout_toLeftOf="@+id/imgNewReleaseForword"
+                                    android:layout_toRightOf="@+id/imgNewRelease"
+                                    android:layout_toStartOf="@+id/imgNewReleaseForword"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:padding="5dp"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/new_releases_file"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:gravity="left"/>
+
+                                <ImageView
+                                    android:id="@+id/imgNewReleaseForword"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </RelativeLayout>
+
+
+                            <RelativeLayout
+                                android:id="@+id/lytRadio"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="5dp">
+
+                                <ImageView
+                                    android:id="@+id/imgRadio"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_centerVertical="true"
+                                    android:padding="5dp"
+                                    android:src="@drawable/radio"
+                                    android:tint="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/lblRadio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_toEndOf="@+id/imgRadio"
+                                    android:layout_toLeftOf="@+id/imgRadioForword"
+                                    android:layout_toRightOf="@+id/imgRadio"
+                                    android:layout_toStartOf="@+id/imgRadioForword"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="false"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:padding="5dp"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:text="@string/radio_stations"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp"
+                                    android:gravity="left"/>
+
+                                <ImageView
+                                    android:id="@+id/imgRadioForword"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:padding="8dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</layout>

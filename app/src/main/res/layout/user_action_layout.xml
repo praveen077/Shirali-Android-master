@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/lytAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgAction"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/share_song"/>
+
+        <TextView
+            android:id="@+id/lblAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:text="@string/add_to_playlist"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:typeface="normal"/>
+    </LinearLayout>
+
+</LinearLayout>

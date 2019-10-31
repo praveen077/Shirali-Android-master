@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/drawerlayout1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/lytCustomBottom">
+
+            <android.support.design.widget.CoordinatorLayout
+                android:id="@+id/coordinatorlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true">
+
+                <android.support.design.widget.AppBarLayout
+                    android:id="@+id/lytAppBar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="320dp"
+                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <android.support.design.widget.CollapsingToolbarLayout
+                        android:id="@+id/collapsing_toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color"
+                        app:collapsedTitleGravity="center"
+                        app:expandedTitleGravity="bottom|center"
+                        app:expandedTitleMarginBottom="80dp"
+                        app:expandedTitleTextAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                        <ImageView
+                            android:id="@+id/img_head"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/artist_new_placeholder" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="50dp"
+                            android:orientation="horizontal"
+                            android:paddingBottom="15dp"
+                            android:paddingTop="80dp"
+                            app:layout_collapseMode="parallax">
+
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/imgSuffle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="25dp"
+                                    android:layout_marginStart="25dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/suffle" />
+
+                                <LinearLayout
+                                    android:id="@+id/imgPlaySong"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/rounded_corner"
+                                    android:orientation="horizontal"
+                                    android:paddingBottom="10dp"
+                                    android:paddingLeft="40dp"
+                                    android:paddingRight="40dp"
+                                    android:paddingTop="10dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/play"
+                                        android:textAllCaps="true"
+                                        android:textColor="@color/play_icon"
+                                        android:textStyle="bold"
+                                        android:textSize="20sp" />
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:src="@drawable/play_icon" />
+
+                                </LinearLayout>
+
+                                <ImageView
+                                    android:id="@+id/imgPlus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="45dp"
+                                    android:layout_marginRight="45dp"
+                                    android:src="@drawable/plus_new" />
+
+                                <ImageView
+                                    android:id="@+id/menu"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:padding="5dp"
+                                    android:src="@drawable/menu_doted" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <android.support.v7.widget.Toolbar
+                            android:id="@+id/toolbar1"
+                            android:layout_width="match_parent"
+                            android:layout_height="?attr/actionBarSize"
+                            android:minHeight="?attr/actionBarSize"
+                            android:title="@string/benny_friedman"
+                            app:layout_collapseMode="pin"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                            app:titleEnabled="false">
+
+                        </android.support.v7.widget.Toolbar>
+                    </android.support.design.widget.CollapsingToolbarLayout>
+                </android.support.design.widget.AppBarLayout>
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipeLyt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/lytNested"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v4.widget.NestedScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fillViewport="true"
+                                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                                <LinearLayout
+                                    android:id="@+id/lytScrolled"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+
+                                    <android.support.v7.widget.RecyclerView
+                                        android:id="@+id/recyclerview_new_released"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:nestedScrollingEnabled="false"
+                                        android:orientation="vertical"
+                                        app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:id="@+id/lytPopularSong"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="2dp"
+                                            android:weightSum="2">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1.5"
+                                                android:gravity="left"
+                                                android:text="@string/popular_songs"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp" />
+
+                                            <TextView
+                                                android:id="@+id/popular_songsview"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight=".5"
+                                                android:alpha="0.80"
+                                                android:gravity="right"
+                                                android:text="@string/view_all"
+                                                android:textColor="@color/white"
+                                                android:textSize="12sp"
+                                                android:visibility="visible" />
+
+
+                                        </LinearLayout>
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recyclerview_popular_songs"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:nestedScrollingEnabled="false"
+                                            android:orientation="vertical"
+                                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lytArtistAlbum"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="5dp"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="2dp"
+                                            android:weightSum="2">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_weight="1.5"
+                                                android:gravity="left"
+                                                android:text="@string/albums"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp" />
+
+                                            <TextView
+                                                android:id="@+id/album_viewall"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight=".5"
+                                                android:alpha="0.80"
+                                                android:gravity="right"
+                                                android:text="@string/view_all"
+                                                android:textColor="@color/white"
+                                                android:textSize="12sp"
+                                                android:visibility="visible" />
+
+
+                                        </LinearLayout>
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recyclerview_album"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginRight="5dp"
+                                            android:nestedScrollingEnabled="false"
+                                            android:orientation="vertical"
+                                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lytPlaylist"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:orientation="horizontal"
+                                            android:weightSum="2">
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_weight="1.5"
+                                                android:gravity="left"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:text="@string/popular_playlists"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp" />
+
+                                                <TextView
+                                                    android:id="@+id/lblArtistSong"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="12sp"
+                                                    android:typeface="sans" />
+                                            </LinearLayout>
+
+                                            <TextView
+                                                android:id="@+id/poplist_viewall"
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center_vertical"
+                                                android:layout_margin="5dp"
+                                                android:layout_weight=".5"
+                                                android:alpha="0.80"
+                                                android:gravity="right"
+                                                android:text="@string/view_all"
+                                                android:textColor="@color/white"
+                                                android:textSize="12sp"
+                                                android:visibility="visible" />
+
+                                        </LinearLayout>
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recycleview_popularplaylist"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="15dp"
+                                            android:nestedScrollingEnabled="false"
+                                            android:orientation="vertical"
+                                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="45dp"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:id="@+id/lytRelatedArtist"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="2dp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:gravity="center_vertical"
+                                                android:text="@string/related_artists"
+                                                android:textColor="@color/white"
+                                                android:textSize="16sp" />
+
+                                            <TextView
+                                                android:id="@+id/lblGenresViewAll"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_margin="5dp"
+                                                android:alpha="0.80"
+                                                android:gravity="right"
+                                                android:text="@string/view_all"
+                                                android:textColor="@color/white"
+                                                android:textSize="12dp"
+                                                android:visibility="gone" />
+
+
+                                        </LinearLayout>
+
+                                        <android.support.v7.widget.RecyclerView
+                                            android:id="@+id/recyclerview_artists"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="15dp"
+                                            android:nestedScrollingEnabled="false"
+                                            android:orientation="vertical"
+                                            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:id="@+id/lytGenre"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="45dp"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/lblGenre"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:paddingLeft="10dp"
+                                            android:text="Genre"
+                                            android:textColor="@color/white"
+                                            android:textSize="16sp" />
+
+                                        <TextView
+                                            android:id="@+id/lblGenreList"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:paddingLeft="10dp"
+                                            android:textColor="@color/light_gray"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </android.support.v4.widget.NestedScrollView>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+                </android.support.v4.widget.SwipeRefreshLayout>
+            </android.support.design.widget.CoordinatorLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:id="@+id/imgBack"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_back_shadow" />
+            </FrameLayout>
+        </android.support.v4.widget.DrawerLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-160dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/waves_spiral" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/lytCustomBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:visibility="visible" />
+    </RelativeLayout>
+</layout>

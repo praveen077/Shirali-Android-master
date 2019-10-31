@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color">
+
+        <FrameLayout
+            android:id="@+id/lytHeader"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:src="@drawable/backarrow" />
+
+            <TextView
+                android:id="@+id/lbl_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/your_subscription"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-160dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/waves_spiral" />
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/lytHeader">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/non_prime_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="15dp"
+                                android:text="@string/profile"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <LinearLayout
+                                android:id="@+id/lytUserProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="5">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="0dp"
+                                    android:layout_weight="4"
+                                    android:padding="20dp"
+                                    android:text="@string/user_profile"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <ImageView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="1"
+                                    android:padding="5dp"
+                                    android:src="@drawable/forward_arrow" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="15dp"
+                                android:alpha="0.15"
+                                android:background="@color/white" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="05dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/trans_blue"
+                                android:orientation="vertical">
+
+                                <FrameLayout
+                                    android:id="@+id/afterTrial"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="240dp"
+                                    android:background="@color/trans_blue"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginLeft="15dp"
+                                            android:orientation="vertical">
+
+
+                                            <ImageView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="20dp"
+                                                android:src="@drawable/subscribe_shape" />
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:text="@string/your_music_everywhere"
+                                                android:textColor="@color/white"
+                                                android:textSize="18sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/textView4"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:alpha=".8"
+                                                android:gravity="left"
+                                                android:text="@string/listen_on_all_devices_ndownload_music_amp_listen_offline_nno_add_amp_no_commitment"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                </FrameLayout>
+
+                                <FrameLayout
+                                    android:id="@+id/beforeTrial"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/new_trial_bg"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="350dp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_above="@+id/lytTrialRemember"
+                                            android:layout_marginLeft="15dp"
+                                            android:layout_marginStart="15dp"
+                                            android:orientation="vertical">
+
+
+                                            <ImageView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="20dp"
+                                                android:scaleType="fitStart"
+                                                android:src="@drawable/ic_logo_trial" />
+
+
+                                            <LinearLayout
+                                                android:id="@+id/lytFreeTrial"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="10dp"
+                                                android:orientation="vertical"
+                                                android:visibility="visible">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:text="@string/get_7_days_free_trial"
+                                                    android:textAllCaps="true"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp"
+                                                    android:textStyle="bold" />
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:alpha="1"
+                                                    android:gravity="left"
+                                                    android:text="@string/choose_your_plan_and_get_7_days_for_free_before_your_subscription_starts"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="14sp" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/lytOffer"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:padding="2dp"
+                                                    android:text="@string/as_a_premium_user_you_can"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="16sp"
+                                                    android:textStyle="bold" />
+
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="30dp"
+                                                        android:layout_height="30dp"
+                                                        android:padding="6dp"
+                                                        android:src="@drawable/ic_premium_trial" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginLeft="5dp"
+                                                        android:layout_marginStart="5dp"
+                                                        android:gravity="center_vertical"
+                                                        android:padding="2dp"
+                                                        android:text="@string/get_access_to_premium_music"
+                                                        android:textColor="@color/white"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="30dp"
+                                                        android:layout_height="30dp"
+                                                        android:padding="6dp"
+                                                        android:src="@drawable/ic_adfree_trial" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginLeft="5dp"
+                                                        android:layout_marginStart="5dp"
+                                                        android:gravity="center_vertical"
+                                                        android:padding="2dp"
+                                                        android:text="@string/listen_ad_free"
+                                                        android:textColor="@color/white"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:layout_width="30dp"
+                                                        android:layout_height="30dp"
+                                                        android:padding="6dp"
+                                                        android:src="@drawable/ic_playlist_trial" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginLeft="5dp"
+                                                        android:layout_marginStart="5dp"
+                                                        android:gravity="center_vertical"
+                                                        android:padding="2dp"
+                                                        android:text="@string/create_personal_playlists"
+                                                        android:textColor="@color/white"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:orientation="horizontal">
+
+                                                    <ImageView
+                                                        android:id="@+id/type"
+                                                        android:layout_width="30dp"
+                                                        android:layout_height="30dp"
+                                                        android:padding="6dp"
+                                                        android:src="@drawable/ic_skip" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginLeft="5dp"
+                                                        android:layout_marginStart="5dp"
+                                                        android:gravity="center_vertical"
+                                                        android:padding="2dp"
+                                                        android:text="@string/skips_unlimited_songs"
+                                                        android:textColor="@color/white"
+                                                        android:textSize="14sp" />
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/lytTrialRemember"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:layout_alignParentBottom="true"
+                                            android:background="@color/dark_sky"
+                                            android:orientation="horizontal"
+                                            android:padding="5dp"
+                                            android:visibility="gone">
+
+                                            <TextView
+                                                android:id="@+id/lblDayRemaining"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="10dp"
+                                                android:text="@string/_3"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp"
+                                                android:textStyle="bold" />
+
+                                            <TextView
+                                                android:id="@+id/lblDayRemainingText"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginBottom="10dp"
+                                                android:layout_marginLeft="10dp"
+                                                android:layout_marginTop="10dp"
+                                                android:alpha="1"
+                                                android:text="@string/days_free_trial_left"
+                                                android:textColor="@color/black"
+                                                android:textSize="14sp" />
+                                        </LinearLayout>
+
+                                    </RelativeLayout>
+
+                                </FrameLayout>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:id="@+id/lblSelectPlan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp"
+                                    android:text="@string/select_a_plan"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginLeft="15dp"
+                                    android:alpha="0.15"
+                                    android:background="@color/white"
+                                    android:visibility="gone" />
+
+                                <LinearLayout
+                                    android:id="@+id/ind_month"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="70dp"
+                                    android:layout_below="@+id/lblSelectPlan"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.5"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="left|center_vertical"
+                                            android:text="@string/individual_monthly"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="right">
+
+                                            <ImageView
+                                                android:id="@+id/imgMonth"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="5dp"
+                                                android:src="@drawable/check_green"
+                                                android:visibility="gone" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:id="@+id/subscribe"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="right"
+                                        android:layout_weight=".5"
+                                        android:gravity="right"
+                                        android:orientation="horizontal"
+                                        android:padding="10dp">
+
+                                        <TextView
+                                            android:id="@+id/lblMonthly"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:paddingRight="10dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/forward_arrow" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/lblDivide1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/ind_month"
+                                    android:layout_marginLeft="15dp"
+                                    android:alpha="0.15"
+                                    android:background="@color/white" />
+
+                                <LinearLayout
+                                    android:id="@+id/indYearLyt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/lblDivide1"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1.4"
+                                        android:gravity="center">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:text="@string/individual_annual"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="right">
+
+                                            <ImageView
+                                                android:id="@+id/img_ind_anual"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:src="@drawable/check_green"
+                                                android:visibility="gone" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight=".6"
+                                        android:gravity="right"
+                                        android:orientation="horizontal"
+                                        android:padding="10dp">
+
+                                        <TextView
+                                            android:id="@+id/lblYearly"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:paddingRight="10dp"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/forward_arrow" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/viewDivide2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/indYearLyt"
+                                    android:layout_marginLeft="15dp"
+                                    android:alpha="0.15"
+                                    android:background="@color/white"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/updateCard"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/viewDivide2"
+                                    android:orientation="horizontal"
+                                    android:padding="10dp"
+                                    android:visibility="visible"
+                                    android:weightSum="2">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1.5">
+
+                                        <ImageView
+                                            android:id="@+id/imgCard"
+                                            android:layout_width="60dp"
+                                            android:layout_height="40dp"
+                                            android:src="@drawable/ic_changecard" />
+
+                                        <TextView
+                                            android:id="@+id/lblCardInfo"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="10dp"
+                                            android:singleLine="true"
+                                            android:text="@string/update_card_information"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:layout_weight=".5"
+                                        android:gravity="right"
+                                        android:orientation="horizontal"
+                                        android:padding="10dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:paddingRight="10dp"
+                                            android:text="@string/three_doller"
+                                            android:textColor="@color/white"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/forward_arrow" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <View
+                                    android:id="@+id/viewBelowAnnual"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/updateCard"
+                                    android:layout_marginLeft="15dp"
+                                    android:alpha="0.15"
+                                    android:background="@color/white"
+                                    android:visibility="visible" />
+
+                                <LinearLayout
+                                    android:id="@+id/lytForPaid"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_below="@+id/viewBelowAnnual"
+                                    android:layout_marginBottom="10dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="15dp"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:id="@+id/lblChangeSubscription"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:gravity="left|center_vertical"
+                                        android:text="@string/cancel_subscription"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/cancelSubscription"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left|center_vertical"
+                                        android:text="@string/unsubscribe"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/lblFinal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lytPaymentText"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="20dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/lblFreeTrial"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/payments_free_text"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/lblAllPaymentMonth"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:text="@string/payments_monthly_text"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <TextView
+                                    android:id="@+id/lblAllPaymentYear"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/payments_yearly_text"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblPrivacyPolicy"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Privacy Policy:"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/lblPrivacyUrl"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_toEndOf="@+id/lblPrivacyPolicy"
+                                        android:layout_toRightOf="@+id/lblPrivacyPolicy"
+                                        android:text="https://www.shiraliapp.com/privacy"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/lblTerms"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginTop="10dp"
+                                        android:text="Terms of Use:"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/lblTermsUrl"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginStart="10dp"
+                                        android:layout_toEndOf="@+id/lblTerms"
+                                        android:layout_toRightOf="@+id/lblTerms"
+                                        android:text="https://www.shiraliapp.com/terms"
+                                        android:textColor="@color/white"
+                                        android:textSize="14sp" />
+
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/prime_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/lytPrime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1.3"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="05dp"
+                                android:alpha="0.6"
+                                android:text="@string/membership"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/individual"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="05dp"
+                                    android:layout_height="05dp"
+                                    android:layout_gravity="center"
+                                    android:layout_margin="05dp"
+                                    android:src="@drawable/circle_blue" />
+
+                                <TextView
+                                    android:id="@+id/lblMembership"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/_1_month"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp" />
+
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:alpha="0.6"
+                                android:text="@string/expires"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:id="@+id/lblExpireDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/october_21st_2017"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lytPrime"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/change_membership"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:text="@string/change_membership"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/forward_arrow" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/change_membership"
+                            android:layout_marginLeft="15dp"
+                            android:alpha="0.15"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:id="@+id/lytUpdateCard"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_below="@+id/change_membership"
+                            android:orientation="horizontal"
+                            android:padding="15dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:gravity="left|center_vertical"
+                                android:text="@string/update_card_information"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="10dp"
+                                android:src="@drawable/forward_arrow" />
+                        </RelativeLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginLeft="15dp"
+                            android:alpha="0.15"
+                            android:background="@color/white" />
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,64 @@
+//This files seems to be a mixture of firebase and aouth related code, perhaphs a few other google services - Mendy
+{
+  "project_info": {
+    "project_number": "527217682522",
+    "firebase_url": "https://shirali-e96d7.firebaseio.com",
+    "project_id": "shirali-e96d7",
+    "storage_bucket": "shirali-e96d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527217682522:android:2da70bca7701f423",
+        "android_client_info": {
+          "package_name": "com.shirali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527217682522-4jupmkmajisveocbcjcgmauuu54u43jd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shirali",
+            "certificate_hash": "f79a391a24ecc5e3efc23c518213ebb85c07580e"
+          }
+        },
+        {
+          "client_id": "527217682522-h6dp5ho3g0fiqofflh9u6eq2idqdlms9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shirali",
+            "certificate_hash": "436111da1e97c534db4ce5e5bc53c3f536998da1"
+          }
+        },
+        {
+          "client_id": "527217682522-sl1gjgpvlr6dum7t499vdi53v55k920l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBC6Cerk9nwGxFMHTR_7j9Rj61peBCm5Pg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527217682522-sl1gjgpvlr6dum7t499vdi53v55k920l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
